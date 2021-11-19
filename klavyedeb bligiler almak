@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+     Scanner giris=new Scanner(System.in);
+     
+   for (; ; )  
+   {
+        System.out.println("A) Kayıt Giriş B) Kayıt AramaC) Kayıt Düzeltme D) Kayıt Silme X) Çıkış");
+     System.out.println("Seçiminiz:");
+     char bilgi=giris.next().charAt(0);
+     
+     switch(bilgi)
+     {
+         case 'A':
+             System.out.println("Giriş secildi");
+         break; 
+         case 'B':
+             System.out.println("Kayıt");
+         break; 
+         case 'C':
+             System.out.println("Düzeltme secildi");
+         break; 
+         case 'D':
+             System.out.println("Silme secildi");
+         break; 
+         case 'X':
+             System.out.println("Çıkış secildi");
+         break; 
+         default:
+         System.out.println("geçersiz");
+     } 
+     if(bilgi=='X') break;
+   }  
+    
+    
+  }
+}
