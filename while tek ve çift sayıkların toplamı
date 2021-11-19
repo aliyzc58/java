@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner giris= new Scanner(System.in);
+    
+    int i=0;
+    double tek=0,cift=0;
+    while(i<=5000)
+    {
+        if(i%2==1)
+        tek+=i;
+        else if (i%2==0)
+        cift+=i;
+        
+        
+        i++;
+    }
+    System.out.println("tek sayıların toplamı"+tek);
+    System.out.println("cift sayıların toplamı"+cift);
+    
+    
+    
+  }
+}
