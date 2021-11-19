@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+     Scanner giris=new Scanner(System.in);
+     char islem='+';
+     int sayi1=0,sayi2=0;
+     double sonuc=0;
+      
+   for (;; )  
+   {
+      
+    System.out.println("+)Toplama");
+    System.out.println("-)Çıkarma");
+    System.out.println("*)Çarpma");
+    System.out.println("/)Bölme");
+    System.out.println("X)Çıkış");
+    System.out.println("Seçiminiz:");
+    islem=giris.next().charAt(0);
+   if (islem!='X') {
+System.out.print("1. sayı:");
+sayi1=giris.nextInt();
+System.out.print("2. sayı:");
+sayi2=giris.nextInt();
+
+    
+     switch(islem)
+     {
+         case '+':
+             sonuc=sayi2+sayi1;
+             System.out.println(sonuc);
+         break; 
+         case '-':
+             sonuc=sayi2-sayi1;
+             System.out.println(sonuc);
+         break; 
+         case '/':
+             sonuc=sayi2/sayi1;
+             System.out.println(sonuc);
+         break; 
+         case '*':
+             sonuc=sayi2*sayi1;
+             System.out.println(sonuc);
+         break; 
+         case 'X':
+             System.out.println("çıkış secildi");
+         break;
+         default:
+         System.out.println("geçersiz");
+     } 
+   }
+   }  
+    
+    
+  }
+}
