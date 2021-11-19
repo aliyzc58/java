@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    int a=50;
+    int b=30;
+   int gecici=a;
+   System.out.println("a değeri"+a);
+   System.out.println("b değeri"+b);
+   System.out.println("gecici değeri"+gecici);
+   a=b;
+    System.out.println("a değeri"+a);
+   System.out.println("b değeri"+b);
+   System.out.println("gecici değeri"+gecici);
+    b=gecici;
+     System.out.println("a değeri"+a);
+   System.out.println("b değeri"+b);
+   System.out.println("gecici değeri"+gecici);
+  }
+}
