@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner giris= new Scanner(System.in);
+    System.out.println("lütfen fidan boyunu griniz");
+    double boy = giris.nextDouble();
+    for (int i=1;i<=20 ;i++) 
+      {
+    	boy += boy * 20 / 100;
+    	System.out.println (i+".yıl sonu fidan boyu=" + boy);
+      }
+  }
+}
