@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner giris= new Scanner(System.in);
+    System.out.println("faktörieli alınacak sayı");
+    int n = giris.nextInt();
+    int fakt=1;
+    for (int i=1;i<=n;i++)
+    {
+        fakt=fakt*i;
+    }
+    System.out.println(n+"faktörieli"+fakt);
+    
+    
+  }
+}
