@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner konsol = new Scanner(System.in);
+    int ogrenci=0,not=0;
+    double ortalama=0,toplamnot=0;
+    
+    while(true)
+    {
+        if(not!=-1)
+        {
+            System.out.print(" öğrenci notu:");
+            not=konsol.nextInt();
+            if(not<=100||not<0)
+            {
+            ogrenci++;
+            toplamnot=toplamnot+not;
+            ortalama=toplamnot/ogrenci;
+                
+            }else
+            {
+                System.out.println(" yanlış not, lütfen en fazla 100 en az 0 giriniz:");
+            }
+            
+        }else
+        {
+            System.out.println("sınıf mevcudu"+ogrenci);
+            System.out.println("sınıf ortalaması"+ortalama);
+            System.out.println(" Programdan çıktınız");
+            break;
+        }
+        
+    }
+
+  
+  }
+}
