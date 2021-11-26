@@ -1,0 +1,38 @@
+
+package dizitopla;
+import java.util.Scanner;
+
+public class DiziTopla {
+
+    public static int topla(int a, int b) {
+    
+    return(a+b);
+    }
+    public static int carp(int a, int b) {
+    
+    return(a*b);
+    }
+    public static int cıkar(int a, int b) {
+    
+    return(a-b);
+    }
+    public static double bol(int a, int b) {
+    if(b==0||a==0){
+        System.out.println("tanımsız");
+        return(0);
+    }else
+    return((double)a/b);
+    }
+
+
+    public static void main(String[] args) {
+       
+      int x=6;
+      int y=9;
+      double sonuc = bol(x,y);
+      System.out.println(sonuc);
+        
+    }
+    
+    
+}
