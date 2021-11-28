@@ -1,0 +1,24 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		
+		int a[]= {30,8,12,2,14,5,9,20,18};
+		int enkucuk=a[0];
+		int enbuyuk=a[0];
+		
+		for(int i=0;i<a.length;i++) {
+			
+			if(a[i]<enkucuk)
+				enkucuk=a[i];
+			if(enbuyuk<a[i])
+			    enbuyuk=a[i];
+		}
+		
+		System.out.println("En kücük"+enkucuk);
+	    System.out.println("en büyük"+enbuyuk);
+	    System.out.println("çarpımı"+enbuyuk*enkucuk);
+	}
+
+}
