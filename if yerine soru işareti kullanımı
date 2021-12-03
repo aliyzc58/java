@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    /*C6nemli unutma */ Scanner giris = new Scanner (System.in);
+    //      int sayD1=giris.nextInt();
+    //char bilgi=giris.next().charAt(0); metin alma unutma
+    int sayi=giris.nextInt ();
+    String sonuc = (sayi >= 50) ? "GeC'ti" : "KaldD1";
+    System.out.println (sonuc);
+
+  }
+}
