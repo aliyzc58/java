@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		
+	    int dizi[]={2,4,6,8,6,4,4,2,1,1,8};
+	    int s;
+	    int e;
+	    for (int i=0;i<dizi.length;i++)
+	    {
+	        s=0;
+	        for (int k=0;k<dizi.length;k++)
+	        {
+	            
+	           if(dizi[i]==dizi[k])
+	               s++;
+	           
+	           
+	        }
+	        
+	         System.out.println(dizi[i]+":"+s+"tane");
+	    }
+	}
+}
