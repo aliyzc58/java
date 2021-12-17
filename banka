@@ -31,21 +31,40 @@ public class Banka {
             bakiyeTL=100;
         }
     }
-    public void parayatır(double miktar){
+    public void parayatır(double miktar, String paraBirimi){
+        if(paraBirim=="USD"){
+             bakiyeUSD+=miktar;
+        }
+        else if (paraBirim=="EU"){
+             bakiyeEU+=miktar;
+        }
+        else if (paraBirim=="AU"){
+             bakiyeAU+=miktar;
+        }
+        else if (paraBirim=="TL"){
+             bakiyeTL+=miktar;
+        }
         
         
-        bakiyeTL+=miktar;
         
         
     }
-    public void paracek(double miktar){
+    public void paracek(double miktar, String paraBirim){
         
-        if(miktar<=bakiyeTL){
-            bakiyeTL-=miktar;
+        if(paraBirim=="USD"&& miktar<bakiyeUSD){
+             bakiyeUSD-=miktar;
         }
-        else{
-            System.out.println("Yetersiz Bakiye");
+        else if (paraBirim=="EU""&& miktar<bakiyeEU){
+             bakiyeEU-=miktar;
         }
+        else if (paraBirim=="AU""&& miktar<bakiyeAU){
+             bakiyeAU-=miktar;
+        }
+        else if (paraBirim=="TL""&& miktar<bakiyeTL){
+             bakiyeTL-=miktar;
+        }else
+        System.out.println("yetersiz"+paraBirim+ "bakiye");
+        
         
     }
     public void bakiyegGoster(){
