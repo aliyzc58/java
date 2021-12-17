@@ -1,0 +1,76 @@
+
+package banka;
+import java.util.Scanner;
+
+public class Banka {
+
+    String adi;
+    String soyadi;
+    String Hesapno;
+    String HesapTercih;
+    double bakiyeTL;
+    double bakiyeUSD;
+    double bakiyeEU;
+    double bakiyeAU;
+    
+    public Banka(){
+        bakiyeTL=100;
+    }
+    //Yapıcı metod parametreli
+    public Banka(String paraBirim){
+        if(paraBirim=="USD"){
+            bakiyeUSD=100;
+        }
+        else if (paraBirim=="EU"){
+            bakiyeEU=100;
+        }
+        else if (paraBirim=="AU"){
+            bakiyeAU=100;
+        }
+        else if (paraBirim=="TL"){
+            bakiyeTL=100;
+        }
+    }
+    public void parayatır(double miktar){
+        
+        
+        bakiyeTL+=miktar;
+        
+        
+    }
+    public void paracek(double miktar){
+        
+        if(miktar<=bakiyeTL){
+            bakiyeTL-=miktar;
+        }
+        else{
+            System.out.println("Yetersiz Bakiye");
+        }
+        
+    }
+    public void bakiyegGoster(){
+        
+        System.out.println("------------------------");
+        System.out.println("TL bakiyeniz"+bakiyeTL);
+        System.out.println("USD bakiyeniz"+bakiyeUSD);
+        System.out.println("EU bakiyeniz"+bakiyeEU);
+        System.out.println("AU bakiyeniz"+bakiyeAU);
+    }
+    
+    public static void main(String[] args) {
+       
+        
+        Banka abc=new Banka();
+        Banka xyz=new Banka();
+        
+        abc.adi="Emir";
+        abc.soyadi="Şahin";
+        abc.Hesapno="1234 525 454";
+        xyz.bakiyegGoster();
+        abc.parayatır(300);
+        abc.bakiyegGoster();
+        
+        
+    }
+    
+}
