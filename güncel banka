@@ -1,0 +1,127 @@
+public class Main {
+String adi;
+String soyadi;
+String hesapNo;
+double bakiyeTL;
+double bakiyeUSD;
+double bakiyeEUR;
+double bakiyeXAU;
+public void paraCek(double miktar)
+{
+if(miktar<=bakiyeTL) {
+System.out.println("Para çekiliyor...");
+bakiyeTL-=miktar;
+}else {
+System.out.println(miktar+" çekemezsiniz");
+System.out.println("Bakiye yetersiz");
+}
+}
+
+//İstenilen para biriminde para çekme
+public void paraCek(double miktar, String paraBirim) {
+if(paraBirim=="TL")
+bakiyeTL-=miktar;
+else if(paraBirim=="EUR")
+bakiyeEUR-=miktar;
+else if(paraBirim=="USD")
+bakiyeUSD-=miktar;
+else if(paraBirim=="XAU")
+bakiyeXAU-=miktar;
+}
+//TL pata yatırma
+public void paraYatir(double miktar) {
+System.out.println("Para yatırılıyor...");
+bakiyeTL+=miktar;
+}
+
+public void paraYatir(double miktar, String paraBirim) {
+if(paraBirim=="TL")
+bakiyeTL+=miktar;
+else if(paraBirim=="EUR")
+bakiyeEUR+=miktar;
+else if(paraBirim=="USD")
+bakiyeUSD+=miktar;
+else if(paraBirim=="XAU")
+bakiyeXAU+=miktar;
+}
+public void bakiyeGoster()
+{
+System.out.println("===============");
+System.out.println("TL Bakiyeniz:"+bakiyeTL);
+System.out.println("USD Bakiyeniz:"+bakiyeUSD);
+System.out.println("EUR Bakiyeniz:"+bakiyeEUR);
+System.out.println("XAU Bakiyeniz:"+bakiyeXAU);
+}
+
+public void bilgiYazdir() {
+System.out.println("Müşteri Adı:"+adi);
+System.out.println("Müşteri Soyadı:"+soyadi);
+System.out.println("Müşteri Hesap No:"+hesapNo);
+}
+public void altinAl(double satisKur, double miktar) {
+double toplam= satisKur*miktar;
+bakiyeTL-=toplam;
+bakiyeXAU+=miktar;
+}
+public void altinSat(double alisKur, double miktar) {
+double toplam= alisKur*miktar;
+bakiyeTL+=toplam;
+bakiyeXAU-=miktar;
+}
+
+public void dolarAl(double satisKur, double miktar) {
+double toplam= satisKur*miktar;
+bakiyeTL-=toplam;
+bakiyeUSD+=miktar;
+}
+public void dolarSat(double alisKur, double miktar) {
+double toplam= alisKur*miktar;
+bakiyeTL+=toplam;
+bakiyeUSD-=miktar;
+}
+public void eurAl(double satisKur, double miktar) {
+double toplam= satisKur*miktar;
+bakiyeTL-=toplam;
+bakiyeEUR+=miktar;
+}
+public void eurSat(double alisKur, double miktar) {
+double toplam= alisKur*miktar;
+bakiyeTL+=toplam;
+bakiyeEUR-=miktar;
+}
+public static void main(String[] args) {
+Main abc= new Main();
+abc.adi="Oğuzhan";
+abc.soyadi="Can";
+abc.hesapNo="1234 12345";
+abc.bilgiYazdir();
+abc.paraYatir(20000,"TL");
+abc.paraYatir(150,"USD");
+abc.paraYatir(100,"EUR");
+abc.paraYatir(50,"XAU");
+abc.bakiyeGoster();
+abc.paraCek(25,"TL");
+abc.paraCek(50, "USD");
+abc.paraCek(75,"EUR");
+abc.paraCek(20,"XAU");
+abc.bakiyeGoster();
+//Altın alış
+abc.altinAl(500, 2);
+abc.bakiyeGoster();
+//Altın Satış
+abc.altinSat(500, 4);
+abc.bakiyeGoster();
+//Dolar alış
+abc.dolarAl(13, 5);
+abc.bakiyeGoster();
+//Dolar Satış
+abc.dolarSat(12,10);
+abc.bakiyeGoster();
+//Euro alış
+abc.eurAl(15, 5);
+abc.bakiyeGoster();
+//Euro Satış
+abc.eurSat(15,10);
+abc.bakiyeGoster();
+}
+}
