@@ -1,0 +1,16 @@
+abstract class Bisiklet{
+    abstract void pedalCevir();
+}
+
+    class dagBisikleti extends Bisiklet{
+        @Override
+        void pedalCevir(){
+            System.out.println("çalışıyooo...");
+        }
+        public static void main(String args[])
+        {
+            dagBisikleti bis=new dagBisikleti();
+            bis.pedalCevir();
+        }
+        
+    }
