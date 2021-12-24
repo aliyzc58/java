@@ -1,0 +1,73 @@
+
+public class Main
+{
+  String kitapAdi;
+  double fiyat;
+  int sayfaSayisi;
+  String yazarAdi;
+  String yayinevi;
+  
+  public Main(){
+      fiyat=10;
+      sayfaSayisi=50;
+  }
+  public Main(String _kitapAdi,double _fiyat,String _yazarAdi,String _yayinevi,int _sayfaSayisi)
+  {
+      this.kitapAdi=_kitapAdi;
+      this.yazarAdi=_yazarAdi;
+      this.fiyat=_fiyat;
+      this.yayinevi=_yayinevi;
+      this.sayfaSayisi=_sayfaSayisi;
+  }
+  
+  public void zamYap(double miktar)
+  {
+      fiyat+=miktar;
+  }
+  public void indirimYap(double miktar)
+  {
+      fiyat-=miktar;
+  }
+  public void fiyatYuzdeArtir(int oran) {
+fiyat+=fiyat*oran/100;
+}
+public void fiyatYuzdeAzalt(int oran) {
+fiyat-=fiyat*oran/100;
+}
+  public static void yazdir(String bilgi)
+  {
+      System.out.println(bilgi);
+  }
+  public static void main (String[]args)
+  {
+    Main k1=new Main();
+    k1.kitapAdi="Tutunamayanlar";
+    k1.yazarAdi="OĞUZ ATAY";
+    k1.yayinevi="Can";
+    k1.fiyat=0;
+    yazdir(k1.kitapAdi);
+     yazdir(k1.yazarAdi);
+      yazdir(k1.yayinevi);
+      System.out.println(k1.fiyat);
+    k1.zamYap(1);
+    System.out.println(k1.fiyat);
+    k1.indirimYap(0.5);
+        System.out.println(k1.fiyat);
+    k1.fiyatYuzdeArtir(100);
+    System.out.println(k1.fiyat);
+       Main k2=new Main();
+    k2.kitapAdi="yaşlı adam ve deniz";
+    k2.yazarAdi="hemingway";
+    k2.yayinevi="Can";
+    k2.fiyat=1;
+    yazdir(k2.kitapAdi);
+    yazdir(k2.yazarAdi);
+    yazdir(k2.yayinevi);
+      
+    Main k3=new Main("Yaren",0,"ali","aşk",1);
+    yazdir(k3.kitapAdi);
+    yazdir(k3.yazarAdi);
+    yazdir(k3.yayinevi);
+    
+  }
+}
